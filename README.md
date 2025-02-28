@@ -12,7 +12,9 @@
 
 ---
 
-A simple automation CLI tool for bumping versions following the [Semantic Versioning](https://semver.org/) specification, generating changelogs via [git-cliff](https://git-cliff.org/), and creating releases on GitHub. It is currently on early development and not ready for production use, or most use cases. It is being developed as a tool for personal use, and as a learning experience. Many features are still missing, and the current implementation is not stable.
+A simple automation CLI tool for bumping versions following the [Semantic Versioning](https://semver.org/) specification, generating changelogs via [git-cliff](https://git-cliff.org/), and creating releases on GitHub.
+
+It is currently on early development and not ready for production use, or most use cases. It is being developed as a tool for personal use, and as a learning experience. Many features are still missing, and the current implementation is not stable.
 
 
 ---
