@@ -1,5 +1,10 @@
 #!/usr/bin/env bun
 
+if (!process.versions.bun) {
+    console.log("Castoria is only supported using Bun.");
+    process.exit(1);
+}
+
 import { type Command, createCommand } from "commander";
 import type { ResultAsync } from "neverthrow";
 import { createFlags } from "#/cli-flags";
