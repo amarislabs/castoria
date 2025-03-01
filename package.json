@@ -40,7 +40,6 @@
         "commander": "^13.1.0",
         "consola": "^3.4.0",
         "conventional-recommended-bump": "^11.0.0",
-        "execa": "^9.5.2",
         "git-cliff": "^2.8.0",
         "neverthrow": "^8.2.0",
         "semver": "^7.7.1",

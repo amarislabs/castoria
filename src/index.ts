@@ -1,3 +1,12 @@
-import type { CastoriaConfig } from "#/types/castoria";
+import type { CastoriaConfig } from "#/types/config";
 
-export const defineConfig = (config: CastoriaConfig): CastoriaConfig => config;
+/**
+ * Define the configuration for Castoria
+ * @param config - The configuration object
+ * @returns The configuration object
+ */
+function defineConfig(config: Partial<CastoriaConfig>): Partial<CastoriaConfig> {
+    return config;
+}
+
+export default defineConfig;
