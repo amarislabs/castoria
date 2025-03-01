@@ -59,4 +59,4 @@ dist
 .idea
 .DS_Store
 .tmp
-.github/meta
+.github/meta/profile
