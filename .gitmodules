@@ -1,3 +1,0 @@
-[submodule ".github/meta"]
-	path = .github/meta
-	url = git@github.com:amarislabs/.github.git
