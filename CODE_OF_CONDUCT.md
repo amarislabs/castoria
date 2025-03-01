@@ -53,9 +53,7 @@ Violations of this Code of Conduct will be handled in a fair and proportional ma
 
 ## Reporting Concerns
 
-If you experience or witness behavior that violates this Code of Conduct, we encourage you to report it confidentially via:
-
-- Email: [amarislabs@proton.me](mailto:amarislabs@proton.me)
+If you experience or witness behavior that violates this Code of Conduct, we encourage you to report it confidentially via: [amarislabs@proton.me](mailto:amarislabs@proton.me).
 
 When reporting an incident, please include:
 - Your contact information
