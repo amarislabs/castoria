@@ -4,11 +4,11 @@
     "": {
       "name": "@amarislabs/logger",
       "dependencies": {
-        "@amarislabs/logger": "^1.1.0",
+        "@amarislabs/logger": "^1.1.1",
         "@clack/prompts": "^0.10.0",
         "@octokit/auth-token": "^5.1.2",
         "@octokit/core": "^6.1.4",
-        "c12": "^3.0.0",
+        "c12": "^3.0.2",
         "commander": "^13.1.0",
         "consola": "^3.4.0",
         "conventional-recommended-bump": "^11.0.0",
@@ -21,17 +21,17 @@
       "devDependencies": {
         "@amarislabs/bun-plugin-dts": "^1.0.0",
         "@biomejs/biome": "^1.9.4",
-        "@types/bun": "latest",
-        "@types/node": "^22.13.5",
+        "@types/bun": "^1.2.4",
+        "@types/node": "^22.13.7",
         "@types/semver": "^7.5.8",
-        "typescript": "^5.7.3",
+        "typescript": "^5.8.2",
       },
     },
   },
   "packages": {
     "@amarislabs/bun-plugin-dts": ["@amarislabs/bun-plugin-dts@1.0.0", "", { "dependencies": { "common-path-prefix": "^3.0.0", "dts-bundle-generator": "^9.5.1", "get-tsconfig": "^4.10.0" } }, "sha512-4mBX78mtu/4obvfRbIdPOvELKiKoyy9iEo9EJodfGFDlUujG9lBElTrcXZUNAjCMyUBlI2RMpoBSCqHQId0EOw=="],
 
-    "@amarislabs/logger": ["@amarislabs/logger@1.1.0", "", { "dependencies": { "consola": "^3.4.0", "picocolors": "^1.1.1" } }, "sha512-rVIVkm3Lkd85aIMi9xi0dO8td50K6OUVKftEcYV56GxGeD3nan2DVYgx/h7Y58/Bx93wlx2IwC8rpe4krl+cpQ=="],
+    "@amarislabs/logger": ["@amarislabs/logger@1.1.1", "", { "dependencies": { "consola": "^3.4.0" } }, "sha512-jtZ14OlKMldlOCBaksXR0YbLtDou4yLP3nJFcmX9qzTfNSsIGMNZWaV0s5W4Kj3dpv/kVLbc+WtVgLL4LL0yBQ=="],
 
     "@biomejs/biome": ["@biomejs/biome@1.9.4", "", { "optionalDependencies": { "@biomejs/cli-darwin-arm64": "1.9.4", "@biomejs/cli-darwin-x64": "1.9.4", "@biomejs/cli-linux-arm64": "1.9.4", "@biomejs/cli-linux-arm64-musl": "1.9.4", "@biomejs/cli-linux-x64": "1.9.4", "@biomejs/cli-linux-x64-musl": "1.9.4", "@biomejs/cli-win32-arm64": "1.9.4", "@biomejs/cli-win32-x64": "1.9.4" }, "bin": { "biome": "bin/biome" } }, "sha512-1rkd7G70+o9KkTn5KLmDYXihGoTaIGO9PIIN2ZB7UJxFrWw04CZHPYiMRjYsaDvVV7hP1dYNRLxSANLaBFGpog=="],
 

@@ -27,16 +27,16 @@
         "@amarislabs/bun-plugin-dts": "^1.0.0",
         "@biomejs/biome": "^1.9.4",
         "@types/semver": "^7.5.8",
-        "@types/bun": "latest",
-        "@types/node": "^22.13.5",
-        "typescript": "^5.7.3"
+        "@types/bun": "^1.2.4",
+        "@types/node": "^22.13.7",
+        "typescript": "^5.8.2"
     },
     "dependencies": {
-        "@amarislabs/logger": "^1.1.0",
+        "@amarislabs/logger": "^1.1.1",
         "@clack/prompts": "^0.10.0",
         "@octokit/auth-token": "^5.1.2",
         "@octokit/core": "^6.1.4",
-        "c12": "^3.0.0",
+        "c12": "^3.0.2",
         "commander": "^13.1.0",
         "consola": "^3.4.0",
         "conventional-recommended-bump": "^11.0.0",
