@@ -9,16 +9,12 @@ const defaultBuildConfig: BuildConfig = {
     outdir: "./dist",
     minify: true,
     target: "bun",
-    external: Object.keys(internal.dependencies).filter((dep) => dep !== "@amarislabs/logger"),
+    external: Object.keys(internal.dependencies),
 };
 
 await Bun.build({
     ...defaultBuildConfig,
-    plugins: [
-        dts({
-            cacheDir: ".cache",
-        }),
-    ],
+    plugins: [dts()],
     define: {
         DESCRIPTION: JSON.stringify(internal.description),
         VERSION: JSON.stringify(internal.version),

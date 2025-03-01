@@ -8,7 +8,7 @@ on:
 jobs:
   latest:
     name: Latest
-    if: ${{contains(github.event.head_commit.message, format('chore(release){0} castoria@', ':'))}}
+    if: ${{contains(github.event.head_commit.message, format('chore(release){0} logger@', ':'))}}
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -28,15 +28,6 @@ jobs:
         with:
           path: ./node_modules
           key: ${{ runner.os }}-bun-${{ hashFiles('./bun.lock', './bun.lockb') }}
-
-      - name: Cache Temporary Build Artifacts (.cache)
-        id: cache-tmp
-        uses: actions/cache@v4
-        with:
-          path: ./.cache
-          key: ${{ runner.os }}-cache-${{ hashFiles('./.cache/dts-cache.json') }}
-          restore-keys: |
-            ${{ runner.os }}-cache-
 
       - name: Install Dependencies
         if: ${{ steps.cache.outputs.cache-hit != 'true' }}
