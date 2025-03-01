@@ -77,7 +77,7 @@ When possible, we encourage community members to try to resolve conflicts direct
 
 ## Final Node
 
-At the end of the day, we urge everyone to use common sense, be a decent person, and assume others mean well. We’re here to build cool things together, and that only works in a space where people feel safe, respected, and valued. Let’s work together to create a thriving community that inspires innovation and collaboration, where everyone can contribute and grow. Thank you for being a part of Amaris Labs!
+At the end of the day, we urge everyone to use common sense, be a decent person, and assume others mean well. We’re here to build cool things together, and that only works in a space where people feel safe, respected, and valued. Let’s work together to create a thriving community that inspires innovation and collaboration, where everyone can contribute and grow. Thank you for being a part of Amaris!
 
 ## Attribution
 
