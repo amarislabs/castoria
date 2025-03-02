@@ -25,12 +25,22 @@ const strategies: PromptSelectChoice[] = [
 ];
 
 /**
- * Executes the prompt version pipeline.
+ * The version pipeline orchestrates the version bumping process.
  *
  * @param context The Castoria context.
  * @returns The updated Castoria context.
  */
 export function versionPipeline(context: CastoriaContext): ResultAsync<CastoriaContext, Error> {
+    return getVersion(context);
+}
+
+/**
+ * Executes the version bump strategy to update context.
+ *
+ * @param context The Castoria context.
+ * @returns The updated Castoria context.
+ */
+function getVersion(context: CastoriaContext): ResultAsync<CastoriaContext, Error> {
     if (context.options.ci && !context.options.bumpStrategy) {
         return executeStrategy(context, "auto");
     }
