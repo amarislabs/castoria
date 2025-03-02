@@ -17,8 +17,6 @@ export function runGh(args: string[], context: CastoriaContext, skipDryRun = fal
         return okAsync("");
     }
 
-    logger.verbose(`Executing gh ${args.join(" ")}`);
-
     return isCommandAvailable("gh").andThen((isAvailable: boolean): ResultAsync<string, Error> => {
         if (!isAvailable) {
             return errAsync(new Error("Command gh is not available"));
