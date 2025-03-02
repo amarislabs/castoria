@@ -1,5 +1,6 @@
 import { InvalidOptionArgumentError } from "commander";
 import type { ReleaseType } from "semver";
+import { SPECIAL_RELEASES } from "#/core/constants";
 import type { BumpStrategy, OptionalBumpStrategy, OptionalReleaseType, ReleaseIdentifierBase } from "#/types";
 
 /**
@@ -53,8 +54,7 @@ export function validateReleaseIdentifierBase(base: string): ReleaseIdentifierBa
         return base as ReleaseIdentifierBase;
     }
 
-    const validPrefixes: string[] = ["next", "canary", "nightly"];
-    const hasValidPrefix: boolean = validPrefixes.some((prefix: string): boolean => base.startsWith(prefix));
+    const hasValidPrefix: boolean = SPECIAL_RELEASES.some((prefix: string): boolean => base.startsWith(prefix));
 
     if (!hasValidPrefix) {
         throw new InvalidOptionArgumentError(`Invalid release identifier base: ${base}`);

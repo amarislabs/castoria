@@ -55,7 +55,7 @@ export function createDefaultContext(): CastoriaContext {
     return {
         config: createDefaultConfig(),
         options: createDefaultOptions(),
-        currentVersion: "",
+        currentVersion: "0.0.0",
         nextVersion: "",
         changelogContent: "",
     };

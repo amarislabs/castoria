@@ -17,6 +17,8 @@ export function runGit(args: string[], context: CastoriaContext, skipDryRun = tr
         return okAsync("");
     }
 
+    logger.verbose(`Executing git ${args.join(" ")}`);
+
     return isCommandAvailable("git").andThen((isAvailable: boolean): ResultAsync<string, Error> => {
         if (!isAvailable) {
             return errAsync(new Error("Command git is not available"));
