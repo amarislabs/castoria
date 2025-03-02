@@ -1,5 +1,6 @@
 import { type Result, type ResultAsync, err, ok } from "neverthrow";
 import { getTextFromFile, writeContentToFile } from "#/utils/filesystem";
+import logger from "#/utils/logger";
 
 /**
  * Partial package.json file structure.
@@ -59,5 +60,6 @@ export function updatePackageVersion(path: string, newVersion: string): ResultAs
     return getTextFromFile(path)
         .andThen(matchAndUpdate)
         .andThen((updatedContent: string): ResultAsync<number, Error> => writeContentToFile(path, updatedContent))
+        .andTee((): void => logger.trace(`Updated version in package.json to ${newVersion}`))
         .map((): void => undefined);
 }

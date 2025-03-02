@@ -2,6 +2,7 @@ import { type Result, type ResultAsync, err, errAsync, ok, okAsync } from "never
 import { type TomlPrimitive, parse } from "smol-toml";
 import { isToml } from "#/utils";
 import { getTextFromFile, writeContentToFile } from "#/utils/filesystem";
+import logger from "#/utils/logger";
 
 /**
  * A small interface representing a Cargo.toml file.
@@ -84,5 +85,6 @@ export function updateCargoVersion(path: string, newVersion: string): ResultAsyn
     return getTextFromFile(path)
         .andThen(matchAndUpdate)
         .andThen((updatedContent: string): ResultAsync<number, Error> => writeContentToFile(path, updatedContent))
+        .andTee((): void => logger.trace(`Updated version in package.json to ${newVersion}`))
         .map((): void => undefined);
 }

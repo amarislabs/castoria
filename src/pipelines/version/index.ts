@@ -3,6 +3,7 @@ import semver, { type ReleaseType } from "semver";
 import { SPECIAL_RELEASES } from "#/core/constants";
 import { updateVersionInContext } from "#/core/context";
 import { generateAutomaticVersion } from "#/pipelines/version/auto";
+import { updateManifestFiles } from "#/pipelines/version/bump";
 import { type PromptSelectChoice, generateManualVersion } from "#/pipelines/version/prompt";
 import type { BumpStrategy, DistributionChannel } from "#/types";
 import type { CastoriaContext } from "#/types/context";
@@ -31,7 +32,7 @@ const strategies: PromptSelectChoice[] = [
  * @returns The updated Castoria context.
  */
 export function versionPipeline(context: CastoriaContext): ResultAsync<CastoriaContext, Error> {
-    return getVersion(context);
+    return getVersion(context).andThen(updateManifestFiles);
 }
 
 /**
