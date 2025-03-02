@@ -32,7 +32,7 @@
         "typescript": "^5.8.2"
     },
     "dependencies": {
-        "@amarislabs/logger": "^1.1.2",
+        "@amarislabs/logger": "^1.2.0",
         "@clack/prompts": "^0.10.0",
         "@octokit/auth-token": "^5.1.2",
         "@octokit/core": "^6.1.4",

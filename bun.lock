@@ -4,7 +4,7 @@
     "": {
       "name": "@amarislabs/logger",
       "dependencies": {
-        "@amarislabs/logger": "^1.1.2",
+        "@amarislabs/logger": "^1.2.0",
         "@clack/prompts": "^0.10.0",
         "@octokit/auth-token": "^5.1.2",
         "@octokit/core": "^6.1.4",
@@ -30,7 +30,7 @@
   "packages": {
     "@amarislabs/bun-plugin-dts": ["@amarislabs/bun-plugin-dts@1.0.0", "", { "dependencies": { "common-path-prefix": "^3.0.0", "dts-bundle-generator": "^9.5.1", "get-tsconfig": "^4.10.0" } }, "sha512-4mBX78mtu/4obvfRbIdPOvELKiKoyy9iEo9EJodfGFDlUujG9lBElTrcXZUNAjCMyUBlI2RMpoBSCqHQId0EOw=="],
 
-    "@amarislabs/logger": ["@amarislabs/logger@1.1.2", "", { "dependencies": { "consola": "^3.4.0" } }, "sha512-7thz5COplE3R2ZFXVPZj9Hy4KvlSB4LEYJuBuyCJH6al7arIsGoDvLX6cvF9lH5HSMPmP4cVRKBciiTCXElRxw=="],
+    "@amarislabs/logger": ["@amarislabs/logger@1.2.0", "", { "dependencies": { "consola": "^3.4.0", "word-wrap": "^1.2.5" } }, "sha512-CXHX9+uShF6AjI0YFa9BR0BSpYolPAG79aZdpK+RDPIIZwDgzC1ynz3SAzTNDc9M6BtE7pJqX4wMjpZiKFS1qg=="],
 
     "@biomejs/biome": ["@biomejs/biome@1.9.4", "", { "optionalDependencies": { "@biomejs/cli-darwin-arm64": "1.9.4", "@biomejs/cli-darwin-x64": "1.9.4", "@biomejs/cli-linux-arm64": "1.9.4", "@biomejs/cli-linux-arm64-musl": "1.9.4", "@biomejs/cli-linux-x64": "1.9.4", "@biomejs/cli-linux-x64-musl": "1.9.4", "@biomejs/cli-win32-arm64": "1.9.4", "@biomejs/cli-win32-x64": "1.9.4" }, "bin": { "biome": "bin/biome" } }, "sha512-1rkd7G70+o9KkTn5KLmDYXihGoTaIGO9PIIN2ZB7UJxFrWw04CZHPYiMRjYsaDvVV7hP1dYNRLxSANLaBFGpog=="],
 
@@ -233,6 +233,8 @@
     "universal-user-agent": ["universal-user-agent@7.0.2", "", {}, "sha512-0JCqzSKnStlRRQfCdowvqy3cy0Dvtlb8xecj/H8JFZuCze4rwjPZQOgvFvn0Ws/usCHQFGpyr+pB9adaGwXn4Q=="],
 
     "which": ["which@2.0.2", "", { "dependencies": { "isexe": "^2.0.0" }, "bin": { "node-which": "./bin/node-which" } }, "sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA=="],
+
+    "word-wrap": ["word-wrap@1.2.5", "", {}, "sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA=="],
 
     "wrap-ansi": ["wrap-ansi@7.0.0", "", { "dependencies": { "ansi-styles": "^4.0.0", "string-width": "^4.1.0", "strip-ansi": "^6.0.0" } }, "sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q=="],
 
