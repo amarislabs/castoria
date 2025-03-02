@@ -8,4 +8,5 @@ export interface CastoriaOptions {
     releaseType: OptionalReleaseType;
     preReleaseId: string;
     preReleaseBase: ReleaseIdentifierBase;
+    ci: boolean;
 }

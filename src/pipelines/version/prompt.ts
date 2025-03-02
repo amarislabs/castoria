@@ -2,6 +2,7 @@ import { ResultAsync, errAsync, okAsync } from "neverthrow";
 import type { ReleaseType, SemVer } from "semver";
 import semver from "semver";
 import { incrementVersion } from "#/pipelines/version";
+import { generateAutomaticVersion } from "#/pipelines/version/auto";
 import type { CastoriaContext } from "#/types/context";
 import logger from "#/utils/logger";
 
@@ -95,6 +96,11 @@ function promptCustomVersion(context: CastoriaContext): ResultAsync<string, Erro
  * @returns The validated version or an error.
  */
 function validateVersion(context: CastoriaContext, version: string): ResultAsync<string, Error> {
+    // if no custom version is provided, generate an automatic version instead
+    if (!version) {
+        return generateAutomaticVersion(context);
+    }
+
     const cleanVersion: string | null = semver.clean(version);
     const coercedVersion: string | undefined = cleanVersion || semver.coerce(version)?.version;
 

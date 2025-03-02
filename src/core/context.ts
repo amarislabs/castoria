@@ -40,8 +40,9 @@ export function createDefaultOptions(): CastoriaOptions {
     return {
         verbose: false,
         dryRun: false,
+        ci: false,
         name: "",
-        bumpStrategy: "manual",
+        bumpStrategy: "",
         releaseType: "",
         preReleaseId: "",
         preReleaseBase: "0",

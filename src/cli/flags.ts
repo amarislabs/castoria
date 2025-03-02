@@ -13,6 +13,7 @@ export function createFlags(program: Command): Command {
         .option("-v, --verbose", "Enable verbose logging for more detailed output.", false)
         .option("-d, --dry-run", "Enable dry-run mode to simulate the release process without making changes.", false)
         .option("-n, --name [name]", "The project identifier to be used during the release process.", "")
+        .option("-c, --ci", "Enable CI mode for automatic version bump strategy.", false)
         .option<OptionalBumpStrategy>(
             "-s, --bump-strategy [strategy]",
             "The bump strategy to use for determining the next version.",
