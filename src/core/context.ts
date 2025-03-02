@@ -4,6 +4,7 @@ import type { CastoriaConfig } from "#/types/config";
 import type { CastoriaContext } from "#/types/context";
 import type { CastoriaOptions } from "#/types/options";
 import { deepMerge } from "#/utils";
+import logger from "#/utils/logger";
 
 /**
  * Default configuration for Castoria.
@@ -100,6 +101,7 @@ export function createContext(
         options: deepMerge({ ...createDefaultOptions() }, opts),
         config: deepMerge({ ...createDefaultConfig() }, conf),
     };
+    logger.trace("Created a new context");
 
     return updateGlobalContext(context);
 }
@@ -116,6 +118,7 @@ export function updateVersionInContext(context: CastoriaContext, version: string
         ...context,
         nextVersion: version,
     };
+    logger.trace(`Updated context with the next version: ${version}`);
 
     return updateGlobalContext(updatedContext);
 }
@@ -135,6 +138,7 @@ export function updateChangelogContentInContext(
         ...context,
         changelogContent: content,
     };
+    logger.trace(`Updated context with the changelog content: ${content}`);
 
     return updateGlobalContext(updatedContext);
 }
@@ -160,6 +164,7 @@ export function updateRepositoryInContext(
             },
         },
     };
+    logger.trace(`Updated context with the repository: ${repository}`);
 
     return updateGlobalContext(updatedContext);
 }
